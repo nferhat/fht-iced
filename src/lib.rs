@@ -109,7 +109,7 @@ impl iced::daemon::DefaultStyle for Theme {
     fn default_style(&self) -> iced::daemon::Appearance {
         iced::daemon::Appearance {
             text_color: self.text.primary,
-            background_color: self.background.tertiary,
+            background_color: Color::TRANSPARENT,
         }
     }
 }
