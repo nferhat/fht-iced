@@ -1,0 +1,17 @@
+[package]
+name = "fht-iced"
+version = "0.1.0"
+description = "Custom Iced theme for fht projects"
+authors = ["Nadjib Ferhat <nferhat20@gmail.com>"]
+license = "GPL-3.0"
+edition = "2021"
+repository = "https://github.com/nferhat/fht-compositor"
+
+[dependencies]
+
+[dependencies.iced]
+git = "https://github.com/iced-rs/iced"
+version = "0.13.0-dev"
+
+[lib]
+path = "src/lib.rs"
