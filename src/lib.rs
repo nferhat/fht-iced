@@ -1,6 +1,5 @@
 use iced::{color, Color};
 
-pub mod utils;
 pub mod button;
 pub mod container;
 pub mod progressbar;
@@ -8,6 +7,7 @@ pub mod scrollable;
 pub mod text;
 pub mod text_editor;
 pub mod text_input;
+pub mod utils;
 
 // The UI theme.
 #[allow(unused)]
@@ -105,10 +105,11 @@ impl std::default::Default for Theme {
     }
 }
 
-impl iced::daemon::DefaultStyle for Theme {
-    fn default_style(&self) -> iced::daemon::Appearance {
-        iced::daemon::Appearance {
+impl iced_runtime::DefaultStyle for Theme {
+    fn default_style(&self) -> iced_runtime::Appearance {
+        iced_runtime::Appearance {
             text_color: self.text.primary,
+            icon_color: self.accent,
             background_color: Color::TRANSPARENT,
         }
     }

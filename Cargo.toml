@@ -8,10 +8,10 @@ edition = "2021"
 repository = "https://github.com/nferhat/fht-compositor"
 
 [dependencies]
-
-[dependencies.iced]
-git = "https://github.com/iced-rs/iced"
-version = "0.13.0-dev"
+# Instead of relying on cargo to figure out dependencies, each project
+# that develop ships iced (pop-os' fork) as submodule, avoiding too much madness
+iced = { path = "./iced" }
+iced_runtime = { path = "./iced/runtime" }
 
 [lib]
 path = "src/lib.rs"
